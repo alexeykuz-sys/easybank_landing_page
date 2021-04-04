@@ -1,0 +1,23 @@
+
+
+$font-stack: $fontFamily,  Helvetica, sans-serif;
+
+* {
+    padding: 0;
+    border: 0;
+  }
+  
+  html{
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+  } 
+
+  body{
+  
+  font-family:$font-stack;
+  min-height: 100vh;
+  font-size: $fontSize;
+  background-color: white;
+
+  }
