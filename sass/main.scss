@@ -1,10 +1,110 @@
 @import "config";
 @import "resets";
 @import "variables";
+@import "buttons";
 
+// Navbar
+.navbar-header {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 100%;
+}
 
+.navbar-toggler {
+  display: none;
+    &.show {
+    right: 15px;
+    margin: 0 auto;
+    position: absolute;
+    // top: 0;
+  }
+}
 
+.hbar-icon {
+  color: $grayishBlue;
+}
+
+.navbar-collapse {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-nav {
+  align-items: center;
+  margin-right: 15px;
+}
+
+.navbar-nav li {
+  & :hover {
+    text-decoration: underline 2px $limeGreen;
+  }
+
+  & a {
+    color: $grayishBlue;
+    list-style: none;
+    text-decoration: none;
+    font-size: $fontSize;
+    font-family: $font-stack;
+    font-weight: weight(regular);
+    padding: 20px;
+  }
+}
+
+.request-btn {
+  @include btn($list);
+  padding: 5px 25px;
+  border-radius: 20px;
+}
+
+//   MODAL
+#cross-icon {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+.modal-wrapper {
+  display: none;
+
+  &.show {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    @include large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    & .modal-menu ul,
+    & .modal-menu {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      align-items: center;
+      width: 100%;
+
+      & li {
+        list-style: none;
+        text-decoration: none;
+        font-size: $fontSize;
+        font-family: $font-stack;
+        font-weight: weight(regular);
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
 
 // Attribution
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
