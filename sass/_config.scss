@@ -37,12 +37,17 @@ $font-weights: (
       margin-bottom: 40px;
   }
   
-  @mixin flexBox($display, $align, $justify){
+  @mixin flexBox($display, $direction, $justify, $wrap){
     display:$display;
-    align-items:$align;
+    flex-direction:$direction;
     justify-content:$justify;
-  
+    flex-wrap: $wrap;
   }
+
+@mixin  element-float($float, $margin) {
+  float:$float;
+  margin-left: $margin;    
+}
 
 
  
