@@ -20,22 +20,30 @@ body {
 .navbar-header {
   display: flex;
   align-items: center;
-  margin-left: 10px;
   width: 100%;
 }
 
 .navbar-toggler {
-  display: none;
-}
-
-.navbar-toggler.show {
+  display: block;
   right: 15px;
   margin: 0 auto;
   position: absolute;
 }
 
-.hbar-icon {
-  color: #9698a6;
+.navbar-toggler #hamburger-icon {
+  display: none;
+}
+
+.navbar-toggler #hamburger-icon.show {
+  display: block;
+}
+
+.navbar-toggler #close-icon {
+  display: none;
+}
+
+.navbar-toggler #close-icon.show {
+  display: block;
 }
 
 .navbar-collapse {
@@ -63,28 +71,26 @@ body {
 }
 
 .request-btn {
-  font-family: "Public Sans", Helvetica, sans-serif;
-  font-weight: 500;
-  padding: 10px 20px;
-  border: 0;
-  background: linear-gradient(to right, #31d35c, #2bb7da);
-  padding: 5px 25px;
-  border-radius: 20px;
-}
-
-.request-btn:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid #31d35c, #2bb7da;
-  color: #31d35c, #2bb7da;
-}
-
-#cross-icon {
   display: none;
 }
 
-#cross-icon.show {
-  display: block;
+@media (min-width: 768px) {
+  .request-btn {
+    display: block;
+    font-family: "Public Sans", Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 0;
+    background: linear-gradient(to right, #31d35c, #2bb7da);
+    padding: 5px 25px;
+    border-radius: 20px;
+  }
+  .request-btn:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid #31d35c, #2bb7da;
+    color: #31d35c, #2bb7da;
+  }
 }
 
 .modal-wrapper {
@@ -93,12 +99,16 @@ body {
 
 .modal-wrapper.show {
   position: absolute;
-  top: 0;
-  width: 100%;
+  top: 60px;
+  left: 50% translate(-50%, -50%);
+  height: 250px;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  background-color: #fafafa;
 }
 
 @media (min-width: 1024px) {
@@ -124,8 +134,23 @@ body {
   font-size: 18px;
   font-family: "Public Sans", Helvetica, sans-serif;
   font-weight: 400;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
+}
+
+.hero-image {
+  background-image: url(/images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 300px;
+}
+
+.hero-image.mockup {
+  position: absolute;
+  top: -50px;
+  width: 200px;
+  height: auto;
 }
 
 .attribution {
