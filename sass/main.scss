@@ -7,7 +7,7 @@
 .navbar-header {
   display: flex;
   align-items: center;
-//   margin-left: 10px;
+  //   margin-left: 10px;
   width: 100%;
 }
 
@@ -43,9 +43,8 @@
 
 .navbar-nav li {
   & :hover {
-    text-decoration: underline 2px $limeGreen;
+    text-decoration: underline 5px $limeGreen;
   }
-
   & a {
     color: $grayishBlue;
     list-style: none;
@@ -59,12 +58,13 @@
 
 .request-btn {
   display: none;
-    @include tablet{
-        display: block;
-        @include btn($list);
-  padding: 5px 25px;
-  border-radius: 20px;
-    }
+  @include tablet {
+    display: block;
+    @include btn($list);
+    // padding: 5px 25px;
+    border-radius: 30px;
+    
+  }
 }
 
 //   MODAL
@@ -75,8 +75,7 @@
   &.show {
     position: absolute;
     top: 60px;
-    left:50%
-    translate(-50%,-50%);
+    left: 50%;
     height: 250px;
     width: 250px;
     align-items: center;
@@ -111,22 +110,24 @@
   }
 }
 
-
 // hero image
-.hero-image{
-    background-image: url(/images/bg-intro-mobile.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 300px;
+.hero-image {
+  background-image: url(/images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 300px;
 
-    &.mockup{
-        position: absolute;
-        top:-50px;
-        width: 200px;
-        height: auto;
-    }
-   
+  @include large{
+    background-image: url(/images/bg-intro-desktop.svg);
+  }
+
+  &.mockup {
+    position: absolute;
+    top: -50px;
+    width: 200px;
+    height: auto;
+  }
 }
 
 // Attribution

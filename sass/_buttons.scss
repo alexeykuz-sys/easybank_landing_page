@@ -5,9 +5,9 @@
     border: 0;
     @include gradient(to right, $color);
 
-    &:hover{
-        @include set-bg-color(black);
-        border: 1px solid $color;  
-        color: $color;  
-    }
+    // &:hover{
+    //     @include set-bg-color(black);
+    //     border: 1px solid $color;  
+    //     color: $color;  
+    // }
 }
