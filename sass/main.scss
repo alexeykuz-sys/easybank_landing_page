@@ -129,6 +129,7 @@
     background-repeat: no-repeat;
     position: relative;
     background-size: 100%;
+    
 
     @include tablet {
       background: url(/images/bg-intro-desktop.svg);
@@ -138,6 +139,7 @@
       background-size: 115%;
       background-position-y: bottom;
       background-position-x: left;
+      
     }
     & .mockup {
       background: url(/images/image-mockups.png);
@@ -147,6 +149,7 @@
       height: 455px;
       background-size: 100%;
       background-repeat: no-repeat;
+      
       
       @include tablet {
         top:-50px;
@@ -160,6 +163,8 @@
     display: block;
     flex-direction: column;
     width: 100%;
+    
+
   }
 }
 
