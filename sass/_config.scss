@@ -12,7 +12,7 @@ $font-weights: (
   
   @function set-text-color($bg-color) {
     @if (lightness($bg-color) > 70) {
-      @return $darkBlue;
+      @return $lightGrayishBlue;
     } @else {
       @return white;
     }

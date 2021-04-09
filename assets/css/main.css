@@ -77,6 +77,7 @@ body {
 @media (min-width: 768px) {
   .request-btn {
     display: block;
+    color: #fafafa;
     font-family: "Public Sans", Helvetica, sans-serif;
     font-weight: 500;
     padding: 10px 20px;
@@ -177,16 +178,25 @@ body {
 @media (min-width: 768px) {
   .intro-wrapper .hero-image .mockup {
     top: -50px;
-    right: -69px;
+    right: 69px;
+    background-size: 140%;
   }
 }
 
 .intro-wrapper .intro-text {
   margin-top: 60px;
-  margin-left: 40px;
+  margin-left: 60px;
   display: block;
   flex-direction: column;
   width: 100%;
+}
+
+.intro-wrapper .intro-text h2 {
+  color: #2d314d;
+}
+
+.intro-wrapper .intro-text p {
+  color: #9698a6;
 }
 
 .footer-wrapper {
