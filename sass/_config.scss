@@ -62,10 +62,16 @@ $font-weights: (
   
   // Media Queries
   
+  $small:576;
   $tablet: 768;
   $large: 1024;
   $desktop: 1280;
   
+  @mixin small {
+    @media (min-width: $small * 1px) {
+      @content;
+    }
+  }
   @mixin tablet {
     @media (min-width: $tablet * 1px) {
       @content;
