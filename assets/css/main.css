@@ -74,7 +74,7 @@ body {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .request-btn {
     display: block;
     color: #fafafa;
@@ -93,27 +93,19 @@ body {
 
 .modal-wrapper.show {
   position: absolute;
-  top: 60px;
-  left: 50%;
   height: 250px;
   width: 250px;
-  align-items: center;
-  justify-content: center;
+  top: 10%;
+  left: 50%;
   display: flex;
-  flex-direction: column;
   background-color: #fafafa;
-  z-index: 999;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  z-index: 1;
 }
 
-@media (min-width: 1024px) {
-  .modal-wrapper.show {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.modal-wrapper.show .modal-menu ul,
-.modal-wrapper.show .modal-menu {
+.modal-wrapper .modal-menu ul,
+.modal-wrapper .modal-menu {
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -121,8 +113,8 @@ body {
   width: 100%;
 }
 
-.modal-wrapper.show .modal-menu ul li,
-.modal-wrapper.show .modal-menu li {
+.modal-wrapper .modal-menu ul li,
+.modal-wrapper .modal-menu li {
   list-style: none;
   text-decoration: none;
   font-size: 18px;
@@ -130,6 +122,74 @@ body {
   font-weight: 400;
   padding: 10px;
   cursor: pointer;
+}
+
+.intro-wrapper {
+  overflow: hidden;
+  padding: 0;
+}
+
+.intro-wrapper .hero-image {
+  background-image: url(/images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  height: 423px;
+}
+
+@media (min-width: 768px) {
+  .intro-wrapper .hero-image {
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 154px;
+    background-position-y: -132px;
+  }
+}
+
+.intro-wrapper .mockup {
+  background-image: url(/images/image-mockups.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: -22%;
+  overflow: hidden;
+  display: none;
+}
+
+.intro-wrapper .intro-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro-wrapper .intro-text h2 {
+  font-weight: 600;
+  color: #2d314d;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.intro-wrapper .intro-text p {
+  text-align: justify;
+  color: #9698a6;
+  margin: 30px;
+}
+
+.intro-wrapper .intro-text .intro-request-btn {
+  display: block;
+  color: #fafafa;
+  font-family: "Public Sans", Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 0;
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  border-radius: 30px;
 }
 
 .footer-wrapper {
