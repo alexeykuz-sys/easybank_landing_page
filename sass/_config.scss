@@ -29,14 +29,20 @@ $font-weights: (
   }
   
   
-  @mixin header($color,$weight,$fontsize) {
-      font-size: $fontsize;
+  @mixin header($color,$weight,$fontSize) {
+      font-size: $fontSize;
       color: $color;
       font-weight: weight($weight);
-      letter-spacing: 3px;
-      margin-bottom: 40px;
+      // letter-spacing: 1px;
   }
   
+  @mixin text($color,$weight,$fontSize, $align) {
+    color: $color;
+    font-weight: weight($weight);
+    font-size: $fontSize;
+    text-align: $align;
+}
+
   @mixin flexBox($display, $direction, $justify, $wrap){
     display:$display;
     flex-direction:$direction;
