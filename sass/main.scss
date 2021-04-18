@@ -259,131 +259,84 @@
   align-items: center;
   justify-content: center;
 
-  // .menu-bottom-list {
-  //   @include flexBox(flex, row, space-evenly, nowrap);
-  //   margin: 0 auto;
-  // }
-  // .footer-menu-wrapper-left {
-  //   line-height: 2rem;
-  //   @include element-float(left, 10px);
-  // }
-  // .footer-menu-wrapper-right {
-  //   line-height: 2rem;
-  //   align-self: baseline;
-  //   @include element-float(right, 10px);
-  // }
-
-  .logo-bottom {
-    margin: 15px auto;
+  & .footer-menu-wrapper-left div,
+  & .footer-menu-wrapper-right div {
+    padding: 5px;
   }
-  .logo-social {
+
+  & .logo-social {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
 
-    svg {
-      margin-top: 20px;
-    }
+  .social-icons {
+    @include flexBox(flex, row, center, wrap);
+    margin: 20px;
 
-    .svg-bottom-logo {
-      fill: $veryLightGray;
+    & div {
+      padding: 10px;
     }
   }
-  .social-icons {
-    @include flexBox(flex, row, space-evenly, wrap);
+  & .menu-bottom-button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-    margin: 20px;
+    & .footer-button {
+      display: inline-block;
+      color: $veryLightGray;
+      @include btn($list);
+      margin: 20px auto;
+      border-radius: 30px;
+      width: 180px;
+      align-self: center;
+    }
+    & .rights{
+      align-self: center;
+      font-size: $fontSize *0.7;
+      margin-bottom: 50px;
+      font-weight: light;
+    }
   }
 
   @include tablet {
     padding: 30px;
 
-    .logo-social {
+    & .logo-social {
       @include flexBox(flex, column, space-between, nowrap);
-      align-items: inherit;
-      .logo-bottom {
-        margin-top: 0;
-      }
-      svg {
-        margin: 0;
-      }
-    }
-    .social-icons {
-      display: flex;
-      margin: 0;
-    }
-    .menu-bottom-list {
-      @include flexBox(flex, row, space-between, nowrap);
-      margin-left: 70px;
-    }
-    .footer-menu-wrapper-left {
-      line-height: 2rem;
-      @include element-float(left, 30px);
-    }
-    .footer-menu-wrapper-right {
-      line-height: 2rem;
-      align-self: baseline;
-      @include element-float(right, 30px);
-    }
-
-    .input-box {
       align-items: center;
-      margin-left: 46px;
-      flex-direction: column;
-    }
-    button {
-      margin-top: 40px;
-    }
-    .copyright {
-      margin-top: 50px;
-      font-size: 12px;
-    }
-  }
-  @include large {
-    padding: 30px;
+      margin-top: 0;
 
-    .logo-social {
-      @include flexBox(flex, column, space-between, nowrap);
-      align-items: inherit;
-
-      .logo-bottom {
-        margin-top: 0;
-      }
-      svg {
+      & .social-icons {
         margin: 0;
       }
+      
     }
-    .social-icons {
-      display: flex;
-      margin: 0;
-    }
-    .menu-bottom-list {
+    & .menu-bottom-list {
       @include flexBox(flex, row, space-between, nowrap);
-      margin-left: 70px;
+      margin-left: 40px;
     }
-    .footer-menu-wrapper-left {
+    & .footer-menu-wrapper-left {
       line-height: 2rem;
-      @include element-float(left, 30px);
+      align-self:flex-start;
+      @include element-float(left, 0px);
     }
-    .footer-menu-wrapper-right {
+    & .footer-menu-wrapper-right {
       line-height: 2rem;
-      align-self: baseline;
+      align-self:flex-start;
       @include element-float(right, 30px);
     }
-
-    .input-box {
-      align-items: flex-start;
-      margin-left: 76px;
-      display: flex;
-      flex-direction: row;
+    & .footer-button {
+      background-color: rebeccapurple;
     }
-    button {
-      margin-top: 0;
-    }
-    .copyright {
-      margin-top: 50px;
-      font-size: 12px;
-    }
+    // .rights {
+    //   margin-top: 50px;
+    //   font-size: 12px;
+    // }
   }
+ 
 }
 
 // Attribution
