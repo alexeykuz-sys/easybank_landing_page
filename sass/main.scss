@@ -186,68 +186,98 @@
   padding: 20px;
   background-color: $lightGrayishBlue;
   flex-direction: column;
-
+ 
   & .choice-section {
     margin-top: 10px;
+    margin-bottom: 20px;
     & h3 {
       @include header($darkBlue, 500, $fontSize * 2);
       text-align: center;
       padding: 50px;
+      @include tablet {
+        display: flex;
+        padding: 50px 0px 50px 0px;
+      }
     }
     & p {
       @include text($grayishBlue, 500, $fontSize, center);
       margin: 5px 30px 10px 30px;
+      @include tablet {
+        display: flex;
+        @include text($grayishBlue, 500, $fontSize, left);
+        margin: 5px 30px 10px 0px;
+      }
     }
   }
 
   & img {
     padding: 30px;
+    @include tablet {
+      display: flex;
+      padding: 30px 0px 30px 0px;
+    }
   }
   & h3 {
     @include header($darkBlue, 500, $fontSize * 1.5);
     margin: 10px;
+    @include tablet {
+      text-align: left;
+    }
   }
   & p {
     @include text($grayishBlue, 400, $fontSize, center);
     margin-top: 30px;
+    @include tablet {
+      
+      text-align: left;
+    }
   }
 }
+
+// Article section
+
 .article {
   @include header($darkBlue, 500, $fontSize * 1.5);
   margin: 100px 0 50px 0;
+  @include tablet {
+    align-self: flex-start;
+    display: flex;
+    padding-left: 110px;
+  }
 }
 .article-section {
   display: flex;
   align-items: center;
+  flex-direction: column;
   background-color: $lightGrayishBlue;
   width: 100%;
+}
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 
-  & .card {
-    background-color: $white;
-    margin: 10px;
+  & .card-body {
+    padding: 30px;
 
-    & .article-image {
-      width: 100%;
-      padding: 20px;
+    & small {
+      font-size: small;
     }
 
-    & .article-text {
-      padding: 20px;
-
-      & small {
-        @include text($grayishBlue, regular, $fontSize * 0.6, center);
-        margin-left: 20px;
-      }
-      & h4 {
-        @include header($darkBlue, bold, $fontSize);
-        margin: 5px 20px 5px 20px;
-        // text-align: justify;
-      }
-      & p {
-        @include text($grayishBlue, regular, $fontSize, left);
-        margin: 5px 20px 5px 20px;
-      }
+    & h4 {
+      font-size: $fontSize;
+      font-weight: bold;
+      color: $darkBlue;
     }
+
+    & p {
+      color: $grayishBlue;
+      margin-bottom: 40px;
+    }
+  }
+
+  & .card-img-top {
+    height: 175px;
   }
 }
 // FOOTER
@@ -293,9 +323,9 @@
       width: 180px;
       align-self: center;
     }
-    & .rights{
+    & .rights {
       align-self: center;
-      font-size: $fontSize *0.7;
+      font-size: $fontSize * 0.7;
       margin-bottom: 50px;
       font-weight: light;
     }
@@ -312,7 +342,6 @@
       & .social-icons {
         margin: 0;
       }
-      
     }
     & .menu-bottom-list {
       @include flexBox(flex, row, space-between, nowrap);
@@ -320,13 +349,15 @@
     }
     & .footer-menu-wrapper-left {
       line-height: 2rem;
-      align-self:flex-start;
+      align-self: flex-start;
       @include element-float(left, 0px);
+      text-align: left;
     }
     & .footer-menu-wrapper-right {
       line-height: 2rem;
-      align-self:flex-start;
+      align-self: flex-start;
       @include element-float(right, 30px);
+      text-align: left;
     }
     & .footer-button {
       background-color: rebeccapurple;
@@ -336,7 +367,6 @@
     //   font-size: 12px;
     // }
   }
- 
 }
 
 // Attribution
