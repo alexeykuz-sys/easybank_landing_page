@@ -242,7 +242,7 @@
   @include tablet {
     align-self: flex-start;
     display: flex;
-    padding-left: 110px;
+    padding-left: 120px;
   }
 }
 .article-section {
@@ -276,9 +276,9 @@
     }
   }
 
-  & .card-img-top {
-    height: 175px;
-  }
+  // & .card-img-top {
+  //   height: 175px;
+  // }
 }
 // FOOTER
 

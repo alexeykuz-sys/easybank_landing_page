@@ -289,7 +289,7 @@ body {
   .article {
     align-self: flex-start;
     display: flex;
-    padding-left: 110px;
+    padding-left: 120px;
   }
 }
 
@@ -324,10 +324,6 @@ body {
 .card .card-body p {
   color: #9698a6;
   margin-bottom: 40px;
-}
-
-.card .card-img-top {
-  height: 175px;
 }
 
 .footer-wrapper {
