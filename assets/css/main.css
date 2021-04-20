@@ -58,7 +58,7 @@ body {
 }
 
 .navbar-nav li :hover {
-  text-decoration: underline 5px #31d35c;
+  text-decoration: 5px underline #31d35c;
   color: #2d314d;
 }
 
@@ -361,7 +361,7 @@ body {
 
 .card .card-body h4 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   color: #2d314d;
   cursor: pointer;
 }
@@ -432,7 +432,7 @@ body {
   align-self: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer-wrapper .menu-bottom-button .footer-button {
     align-self: flex-end;
     margin: 0px 40px 20px 0;
@@ -443,10 +443,10 @@ body {
   align-self: center;
   font-size: 12.6px;
   margin-bottom: 50px;
-  font-weight: light;
+  font-weight: 300;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer-wrapper .menu-bottom-button .rights {
     margin-top: 30px;
     margin-right: 40px;
@@ -454,7 +454,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer-wrapper {
     padding: 30px;
   }
