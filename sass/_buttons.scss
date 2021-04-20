@@ -4,6 +4,7 @@
     padding: 10px 20px;
     border: 0;
     @include gradient(to right, $color);
+    @include boxShadow(rgba(158, 167, 157, 0.527));
 
     // &:hover{
     //     @include set-bg-color(black);
