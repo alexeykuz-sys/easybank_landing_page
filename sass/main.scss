@@ -6,10 +6,8 @@
 // Navbar
 .navbar-header {
   display: flex;
-  z-index: 999;
   align-items: center;
   width: 100%;
-  // height: 70px;
 }
 
 .navbar-toggler {
@@ -75,24 +73,28 @@
   display: none;
 
   &.show {
+    z-index: 999;
     position: absolute;
-    height: 250px;
-    width: 250px;
-    top: 10%;
+    height: 300px;
+    width: 300px;
+    top: 8%;
     left: 50%;
     display: flex;
     background-color: #fafafa;
     transform: translateX(-50%);
     border-radius: 15px;
-    z-index: 1;
+    @include boxShadow(rgba(114, 95, 95, 0.589))
+    
   }
   & .modal-menu ul,
   & .modal-menu {
     display: flex;
     flex-direction: column;
-    padding-left: 0;
+    // padding-left: 0;
     align-items: center;
     width: 100%;
+    padding: 10px;
+    
 
     & li {
       list-style: none;
@@ -112,7 +114,6 @@
   position: relative;
   height: 100%;
   display: block;
-  // overflow: hidden;
 
   & .hero-image {
     background-image: url(/images/bg-intro-mobile.svg);
@@ -124,7 +125,6 @@
     background-size: 100%;
     @include large {
       background-image: url(/images/bg-intro-desktop.svg);
-      // left: 169px;
       width: 100%;
       height: 100%;
       background-size: 100%;
@@ -138,9 +138,7 @@
       height: 116%;
       position: relative;
       display: block;
-      z-index: 1;
       top: 0;
-      // margin: -112px auto;
       background-size: 100%;
       background-position: center bottom;
 
@@ -155,8 +153,6 @@
         height: 160%;
         background-position-x: 350px;
         background-position-y: -320px;
-        // top: -100px;
-        // left: 92px;
       }
     }
   }
