@@ -16,7 +16,7 @@ $font-stack: $fontFamily,  Helvetica, sans-serif;
     box-sizing: border-box;
     height: auto;
     width: auto;
-    // overflow-x: hidden;
+    overflow-x: hidden;
   } 
 
   body{
@@ -26,5 +26,6 @@ $font-stack: $fontFamily,  Helvetica, sans-serif;
   // width: 100%;
   font-size: $fontSize;
   background-color: white;
+  overflow-x: hidden;
 
   }

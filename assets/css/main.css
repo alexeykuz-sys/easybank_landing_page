@@ -8,6 +8,7 @@ html {
   box-sizing: border-box;
   height: auto;
   width: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   min-height: 100vh;
   font-size: 18px;
   background-color: white;
+  overflow-x: hidden;
 }
 
 .navbar-header {
@@ -166,12 +168,12 @@ body {
   display: block;
   top: 0;
   background-size: 100%;
-  background-position: center bottom;
+  background-position-y: -105px;
 }
 
 @media (min-width: 768px) {
   .intro-wrapper .hero-image::after {
-    height: 130%;
+    height: 100%;
     background-position-x: 50px;
     background-position-y: -120px;
   }
@@ -182,8 +184,8 @@ body {
     background-size: 77%;
     margin: 0;
     height: 160%;
-    background-position-x: 350px;
-    background-position-y: -320px;
+    background-position-x: 300px;
+    background-position-y: -280px;
   }
 }
 

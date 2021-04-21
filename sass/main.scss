@@ -140,10 +140,11 @@
       display: block;
       top: 0;
       background-size: 100%;
-      background-position: center bottom;
+      background-position-y: -105px;
+     
 
       @include tablet {
-        height: 130%;
+        height: 100%;
         background-position-x: 50px;
         background-position-y: -120px;
       }
@@ -151,8 +152,8 @@
         background-size: 77%;
         margin: 0;
         height: 160%;
-        background-position-x: 350px;
-        background-position-y: -320px;
+        background-position-x: 300px;
+        background-position-y: -280px;
       }
     }
   }
