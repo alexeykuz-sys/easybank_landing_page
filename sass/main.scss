@@ -291,6 +291,10 @@
   border-radius: 10px;
   border: none;
 
+  & .card-img-top{
+    max-height:180px;
+  }
+
   & .card-body {
     padding: 30px;
 
@@ -389,7 +393,7 @@
       & .social-icons {
         margin: 0;
         cursor: pointer;
-        & img:hover {
+        & div svg:hover {
           background-color: $limeGreen;
         }
       }
