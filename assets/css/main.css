@@ -6,13 +6,13 @@
 
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
+  height: auto;
+  width: auto;
 }
 
 body {
   font-family: "Public Sans", Helvetica, sans-serif;
   min-height: 100vh;
-  width: 100%;
   font-size: 18px;
   background-color: white;
 }
